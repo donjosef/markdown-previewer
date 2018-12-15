@@ -4,7 +4,7 @@ function Editor(props) {
   const { markdown, onChangeText } = props;
   return (
     <section className="editor-wrapper">
-      <h2>Editor</h2>
+      <h2 className="editor-title">Editor</h2>
       <form>
         <textarea 
             id="editor" 
