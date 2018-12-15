@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function Previewer() {
+function Previewer(props) {
+    const { result } = props;
   return (
     <section  className="preview-wrapper">
      <h2>Preview</h2>
-      <div id="preview" className="preview">
-       preview
+      <div id="preview" className="preview" dangerouslySetInnerHTML={{__html: result}} >
       </div>
     </section>
   )

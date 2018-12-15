@@ -3,6 +3,9 @@ import Editor from './components/Editor/Editor';
 import Previewer from './components/Previewer/Previewer';
 import './App.css';
 
+const marked = require('marked');
+
+
 class App extends Component {
 
   state = {
@@ -15,10 +18,11 @@ class App extends Component {
     });
   }
   render() {
+    
     return (
       <div className="App">
         <Editor markdown={this.state.markdown} onChangeText={this.changeTextHandler}/>
-        <Previewer />
+        <Previewer result={marked(this.state.markdown)}/>
       </div>
     );
   }
