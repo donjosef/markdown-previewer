@@ -1,11 +1,16 @@
 import React from 'react'
 
-function Editor() {
+function Editor(props) {
+  const { markdown, onChangeText } = props;
   return (
     <section className="editor-wrapper">
       <h2>Editor</h2>
       <form>
-        <textarea id="editor" className="editor">editor</textarea>
+        <textarea 
+            id="editor" 
+            className="editor"
+            onChange={onChangeText}
+            value={markdown}>editor</textarea>
       </form>
     </section>
     

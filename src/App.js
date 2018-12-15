@@ -4,10 +4,20 @@ import Previewer from './components/Previewer/Previewer';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    markdown: ''
+  }
+
+  changeTextHandler = (e) => {
+    this.setState({
+      markdown: e.target.value
+    });
+  }
   render() {
     return (
       <div className="App">
-        <Editor />
+        <Editor markdown={this.state.markdown} onChangeText={this.changeTextHandler}/>
         <Previewer />
       </div>
     );
