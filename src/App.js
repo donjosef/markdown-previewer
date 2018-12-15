@@ -9,7 +9,7 @@ const marked = require('marked');
 class App extends Component {
 
   state = {
-    markdown: ''
+    markdown: '# Im an h1'
   }
 
   changeTextHandler = (e) => {
